@@ -49,9 +49,7 @@ class Follow(models.Model):
 
     class Meta:
         constraints = (models.UniqueConstraint(
-            fields=('following', 'user', ), name='unique pair'), )
+            fields=('user', 'following', ), name='unique pair'), )
 
     def __str__(self):
         return self.user
-
-
